@@ -46,4 +46,5 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`📡 Accessible at:`);
   console.log(`   - http://localhost:${PORT} (local)`);
   console.log(`   - http://<your-ec2-public-ip>:${PORT} (EC2)`);
-  console.log(`   - http://<your-private-ip>:${PORT} (private network)\n`);\n});
+  console.log(`   - http://<your-private-ip>:${PORT} (private network)\n`);
+});
