@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rock-paper-scissors-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rock-paper-scissors-frontend
+  template:
+    metadata:
+      labels:
+        app: rock-paper-scissors-frontend
+    spec:
+      containers:
+      - name: frontend-container
+        image: rock-paper-scissors-frontend:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
+        ports:
+          - containerPort: 80
