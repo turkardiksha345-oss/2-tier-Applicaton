@@ -41,6 +41,9 @@ app.post('/play', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`\n✅ Server running on port ${PORT}`);
+  console.log(`📡 Accessible at:`);
+  console.log(`   - http://localhost:${PORT} (local)`);
+  console.log(`   - http://<your-ec2-public-ip>:${PORT} (EC2)`);
+  console.log(`   - http://<your-private-ip>:${PORT} (private network)\n`);\n});

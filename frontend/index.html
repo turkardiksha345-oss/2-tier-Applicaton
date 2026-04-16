@@ -3,21 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
+  <title>Rock Paper Scissors Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="background-animation"></div>
   <div class="container">
-    <h1>Rock Paper Scissors</h1>
-    <div class="choices">
-      <button id="rock">Rock</button>
-      <button id="paper">Paper</button>
-      <button id="scissors">Scissors</button>
+    <div class="header">
+      <h1>🎮 Rock Paper Scissors</h1>
+      <p class="subtitle">Test your luck against the computer!</p>
     </div>
+    
+    <div class="game-container">
+      <div class="choices">
+        <button id="rock" class="choice-btn rock-btn">
+          <span class="emoji">🪨</span>
+          <span class="text">Rock</span>
+        </button>
+        <button id="paper" class="choice-btn paper-btn">
+          <span class="emoji">📄</span>
+          <span class="text">Paper</span>
+        </button>
+        <button id="scissors" class="choice-btn scissors-btn">
+          <span class="emoji">✂️</span>
+          <span class="text">Scissors</span>
+        </button>
+      </div>
+    </div>
+    
     <div class="result">
       <p id="result-text">Choose your move!</p>
+      <div class="result-details">
+        <p><strong>Your Choice:</strong> <span id="player-choice">-</span></p>
+        <p><strong>Computer Choice:</strong> <span id="computer-choice">-</span></p>
+      </div>
     </div>
+    
+    <div class="stats">
+      <div class="stat-box">
+        <span class="stat-label">Wins</span>
+        <span class="stat-value" id="wins">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Losses</span>
+        <span class="stat-value" id="losses">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Ties</span>
+        <span class="stat-value" id="ties">0</span>
+      </div>
+    </div>
+    
+    <button id="reset" class="reset-btn">Reset Stats</button>
   </div>
+  
+  <div class="server-info">
+    <small id="server-status">Connecting to server...</small>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
